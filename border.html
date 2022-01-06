@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .gradient-border {
+            /* --border-width: 3px; */
+
+            /* position: relative; */
+            display: block;
+            justify-content: center;
+            align-items: center;
+            /* width: 300px;
+            height: 200px; */
+            /* font-family: Lato, sans-serif; */
+            /* font-size: 2.5rem;
+            text-transform: uppercase; */
+            color: (241, 21, 21rgb);
+            border: solid 2px;
+            background: rgb(255, 255, 255);
+            border-radius: 5px;
+            /* border-color: linear-gradient(60deg,
+                    hsl(224, 85%, 66%),
+                    hsl(269, 85%, 66%),
+                    hsl(314, 85%, 66%),
+                    hsl(359, 85%, 66%),
+                    hsl(44, 85%, 66%),
+                    hsl(89, 85%, 66%),
+                    hsl(134, 85%, 66%),
+                    hsl(179, 85%, 66%));*/
+            animation: moveGradient 10s linear infinite;
+            background-clip: content-box;
+
+        }
+
+        /* .gradient-border::after {
+            position: absolute;
+            content: "";
+            top: calc(-1 * var(--border-width));
+            left: calc(-1 * var(--border-width));
+            z-index: -1;
+            width: calc(100% + var(--border-width) * 2);
+            height: calc(100% + var(--border-width) * 2);
+            background: linear-gradient(60deg,
+                    hsl(224, 85%, 66%),
+                    hsl(269, 85%, 66%),
+                    hsl(314, 85%, 66%),
+                    hsl(359, 85%, 66%),
+                    hsl(44, 85%, 66%),
+                    hsl(89, 85%, 66%),
+                    hsl(134, 85%, 66%),
+                    hsl(179, 85%, 66%));
+            background-size: 300% 300%;
+            background-position: 0 50%;
+            border-radius: calc(2 * var(--border-width));
+            animation: moveGradient 4s alternate infinite;
+        } */
+
+
+        @keyframes moveGradient {
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style> -->
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        } */
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+
+        .rainbow {
+            position: relative;
+            z-index: 0;
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .rainbow::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: #399953;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+            animation: rotate 4s linear infinite;
+        }
+
+        .rainbow::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 6px;
+            top: 6px;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+            background: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradient-border">css<br />is<br />awesome</div>
+    <div class="rainbow">
+        Rainbow border
+    </div>
+</body>
+
+</html>
