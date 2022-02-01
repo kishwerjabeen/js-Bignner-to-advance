@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .css-serial table {
+        width: 500px;
+        /* For Responsive design set 100% */
+        border-collapse: collapse;
+        margin: 30px 0px 30px;
+        background-color: #fff;
+        font-size: 14px;
+        border-spacing: 0px !important;
+    }
+
+    /* .css-serial tr {
+        height: 40px;
+    } */
+
+    .css-serial th {
+        /* background: #333; */
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .css-serial td,
+    .css-serial th {
+        padding: 6px 6px 6px 10px;
+        border: 1px solid rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    /* CSS3 Zebra Striping  */
+    /*  .css-serial tr:nth-of-type(odd) {
+        background: #eee;
+    } */
+
+    /* Automatic Serial Number Row */
+    .css-serial {
+        counter-reset: serial-number;
+        /* Set the serial number counter to 0 */
+    }
+
+    .css-serial td:first-child:before {
+        counter-increment: serial-number;
+        /* Increment the serial number counter */
+        content: counter(serial-number);
+        /* Display the counter */
+    }
+</style>
+
+<body>
+    <table class="css-serial">
+        <thead>
+            <tr>
+                <th>Sr. No</th>
+                <th>Employee Name</th>
+                <th>Position</th>
+        </thead>
+        <tbody>
+            <!-- In every row 1st td is intentionally left blank for serial number -->
+            <tr>
+                <td>&nbsp;</td>
+                <td>Employee Name 1</td>
+                <td>Position 1</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Employee Name 2</td>
+                <td>Position 2</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Employee Name 3</td>
+                <td>Position 3</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Employee Name 4</td>
+                <td>Position 4</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "JS Basic to Advance ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kishwerjabeen/js-Bignner-to-advance.git"
+  },
+  "keywords": [
+    "Js",
+    "Basic",
+    "to",
+    "Advance"
+  ],
+  "author": "KJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kishwerjabeen/js-Bignner-to-advance/issues"
+  },
+  "homepage": "https://github.com/kishwerjabeen/js-Bignner-to-advance#readme"
+}
